@@ -1526,3 +1526,173 @@ button {
     transform: translateY(-3px);
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
 }
+
+/* ===== Mobile Responsive Fix ===== */
+
+@media screen and (max-width: 768px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body,
+    #root {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    .site-shell,
+    .wrap,
+    .section,
+    .hero,
+    .resume-section,
+    .contact-section {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .wrap {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    /* Navbar */
+    .navbar {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .navbar nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .navbar nav a {
+        font-size: 13px;
+    }
+
+    /* Hero section */
+    .hero {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hero-copy,
+    .hero-visual {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 10vw, 58px);
+        line-height: 1.12;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    /* Existing photo stays unchanged */
+    .photo-frame {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .photo-frame img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* Sections and cards */
+    .about-grid,
+    .skills-grid,
+    .projects-list,
+    .contact-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+    }
+
+    .skill-card,
+    .project-card,
+    .about-facts,
+    .education-card,
+    .resume-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Resume card and buttons */
+    .resume-card {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        padding: 22px;
+    }
+
+    .resume-copy {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .resume-card p,
+    .resume-copy p {
+        overflow-wrap: anywhere;
+        line-height: 1.7;
+    }
+
+    .button,
+    .enter-button,
+    .nav-cta,
+    .contact-actions a {
+        max-width: 100%;
+        white-space: normal;
+    }
+
+    .resume-card .button,
+    .resume-card a {
+        width: 100%;
+        min-width: 0;
+        justify-content: center;
+    }
+
+    /* Contact section */
+    .contact-section h2,
+    .section-heading {
+        font-size: clamp(32px, 8vw, 46px);
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .contact-actions .button {
+        width: 100%;
+    }
+
+    /* Prevent long text from causing overflow */
+    p,
+    h1,
+    h2,
+    h3 {
+        overflow-wrap: break-word;
+    }
+}
