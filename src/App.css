@@ -1696,3 +1696,39 @@ button {
         overflow-wrap: break-word;
     }
 }
+
+/* Final mobile layout fixes */
+@media (max-width: 600px) {
+
+    /* Keep all sections inside the phone screen */
+    .resume-card,
+    .resume-content,
+    .resume-section,
+    .contact-section {
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    /* Resume button should not overflow */
+    .resume-card button,
+    .resume-card a {
+        max-width: 100%;
+        box-sizing: border-box;
+        white-space: normal;
+    }
+
+    /* Prevent large headings from going off-screen */
+    .contact-section h1,
+    .contact-section h2,
+    .contact-section h3 {
+        overflow-wrap: anywhere;
+        max-width: 100%;
+    }
+
+    /* Keep text and cards within the viewport */
+    .resume-card *,
+    .contact-section * {
+        box-sizing: border-box;
+    }
+}
